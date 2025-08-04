@@ -1,4 +1,6 @@
 const Parser = require('rss-parser');
+const fs = require('fs')
+
 
 const links = {
   CNN: "http://rss.cnn.com/rss/edition.rss",
@@ -15,7 +17,10 @@ let BBCNews = [];
 ({title: item.title, content: item.content, link: item.guid}));
 
   // to check bbcarray
-  console.log(BBCNews);
+  // console.log(BBCNews);
+  const data = JSON.stringify(BBCNews)
+  await fs.promises.writeFile('news.json', data, 'utf8');
+  console.log("Have done a file!");
   
   process.exit(0);
 })(links.BBC);
