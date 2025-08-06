@@ -4,7 +4,7 @@ dotenv.config();
 // check .env var
 // console.log(process.env.HF_TOKEN);
 
-const token = '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';
+const token = process.env.HF_TOKEN;
 const model = "Helsinki-NLP/opus-mt-en-uk";
 
 const body = (inp) => {
@@ -34,6 +34,6 @@ export async function translate(text) {
 
 };
 
-translate('Hello everyone, I am Alan, for now living in Baltic State which named Estonia.')
+translate('Hello everyone, I am Alan. I am living in Baltic State which named Estonia.')
 
 
