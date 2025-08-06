@@ -4,7 +4,7 @@ dotenv.config();
 // check .env var
 // console.log(process.env.HF_TOKEN);
 
-const token = process.env.HF_TOKEN;
+// const token = process.env.HF_TOKEN;
 const model = "Helsinki-NLP/opus-mt-en-uk";
 
 const body = (inp) => {
